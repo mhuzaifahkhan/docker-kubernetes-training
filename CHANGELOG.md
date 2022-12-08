@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/mhuzaifahkhan/docker-kubernetes-training/compare/v0.1.0...v0.1.1) (2022-12-08)
+
+
+### Bug Fixes
+
+* removing unused lines from workflow ([6a80c6c](https://github.com/mhuzaifahkhan/docker-kubernetes-training/commit/6a80c6c5f81b5f1f1e8158e5fedf395aa73684b2))
+
 ## 0.1.0 (2022-12-08)
 
 

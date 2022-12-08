@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2](https://github.com/mhuzaifahkhan/docker-kubernetes-training/compare/v0.1.1...v0.1.2) (2022-12-08)
+
+
+### Bug Fixes
+
+* correcting text in flash app ([04567e7](https://github.com/mhuzaifahkhan/docker-kubernetes-training/commit/04567e71cac3b16ff654ade6ba3544992723f92c))
+* correcting text in flash app ([55064c9](https://github.com/mhuzaifahkhan/docker-kubernetes-training/commit/55064c9d83b3e62572b261d8675e2e7da69b3cfd))
+
 ## [0.1.1](https://github.com/mhuzaifahkhan/docker-kubernetes-training/compare/v0.1.0...v0.1.1) (2022-12-08)
 
 

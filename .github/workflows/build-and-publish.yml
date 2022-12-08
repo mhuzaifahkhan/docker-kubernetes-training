@@ -24,6 +24,10 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: python
       - name: Container meta data
         id: meta
         uses: docker/metadata-action@v4
@@ -34,5 +38,8 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.release.outputs.major }}.${{ steps.release.outputs.minor }}.${{ steps.release.outputs.patch }}
+          # tags: ${{ steps.meta.outputs.tags }}
+          # labels: ${{ steps.meta.outputs.labels }}

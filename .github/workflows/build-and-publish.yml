@@ -1,8 +1,6 @@
 name: Build and Publish
 
 on:
-  push:
-    branches: [main]
   pull_request:
 
 env:
@@ -26,12 +24,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           release-type: python
-      - name: Container meta data
-        id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
       - name: Build and push Container image
+        if: ${{ steps.release.outputs.releases_created }}
         uses: docker/build-push-action@v3
         with:
           context: .

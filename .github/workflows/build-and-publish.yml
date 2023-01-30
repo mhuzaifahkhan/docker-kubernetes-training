@@ -27,7 +27,7 @@ jobs:
           release-type: python
       - name: Build and push Container image
         if: ${{ steps.release.outputs.releases_created }}
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: .
           push: true
